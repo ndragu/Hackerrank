@@ -16,34 +16,36 @@ function matrixRotation(matrix,m,n,r) {
     var layerRotations=Math.floor(Math.min(m,n)/2);    
     var str = matrix.slice();
     
-    for (var rotations=0; rotations<r; rotations++) {
-      for (var count=0; count<layerRotations; count++) {
-        var topLeft=str[count][count];
-        var bottomLeft=str[m-count-1][count];
-        var bottomRight = str[m-count-1][n-count-1];
+     for (var count=0; count<layerRotations; count++) { //iterate through each matrix layer
+        //calculate the optimum number of rotations since r could be greater than the # of elements in the sequence
+        var minNumRot=r%(2*(m+n-4*count-2)); 
+        for (var rotations=0; rotations<minNumRot; rotations++) {
+            var topLeft=str[count][count];
+            var bottomLeft=str[m-count-1][count];
+            var bottomRight = str[m-count-1][n-count-1];
 
-        //Shift top row
-        for (var i=count; i<n-count-1; i++) {
-          str[count][i]=str[count][i+1];
-        }
+            //Shift top row
+            for (var i=count; i<n-count-1; i++) {
+              str[count][i]=str[count][i+1];
+            }
 
-        //Shift left column  
-        for (var i=m-count-1; i>count+1; i--) {  	   
-          str[i][count]=str[i-1][count];
-        }
-        str[count+1][count]=topLeft;
+            //Shift left column  
+            for (var i=m-count-1; i>count+1; i--) {  	   
+              str[i][count]=str[i-1][count];
+            }
+            str[count+1][count]=topLeft;
 
-        //Shift bottom row          
-        for (var i=n-count-1; i>count; i--) {  	
-          str[m-count-1][i]=str[m-count-1][i-1];
-        }
-        str[m-count-1][count+1]=bottomLeft;
+            //Shift bottom row          
+            for (var i=n-count-1; i>count; i--) {  	
+              str[m-count-1][i]=str[m-count-1][i-1];
+            }
+            str[m-count-1][count+1]=bottomLeft;
 
-        //Shift right column   
-        for (var i=count; i<m-count-1; i++) {  	
-          str[i][n-count-1]=str[i+1][n-count-1];
-        }
-        str[m-count-2][n-count-1]=bottomRight;
+            //Shift right column   
+            for (var i=count; i<m-count-1; i++) {  	
+              str[i][n-count-1]=str[i+1][n-count-1];
+            }
+            str[m-count-2][n-count-1]=bottomRight;
 
       }
     }
