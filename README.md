@@ -12,5 +12,6 @@ This repository contains my solutions for various Hackerrank challenges. I used 
       * [Mini-Max Sum](./Algorithms/Wamup/07-Mini-MaxSum.js)
       * [Bithday Cake Candles](./Algorithms/Wamup/08-BirthdayCakeCandles.js)
       * [Time Conversion](./Algorithms/Wamup/09-TimeConversion.js)
-      
+    * __Implementation__
+      * [Matrix Rotation]
       
