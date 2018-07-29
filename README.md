@@ -7,3 +7,4 @@ This repository contains my solutions for various Hackerrank challenges. I used 
       * [Compare the triplets](./Algorithms/Wamup/02-CompareTheTriplets.js)
       * [A Very Big Sum](./Algorithms/Wamup/03-AVeryBigSum.js)
       * [Diagonal Difference](./Algorithms/Wamup/04-DiagonalDifference.js)
+      * [Plus Minus](./Algorithms/Wamup/05-PlusMinus)
