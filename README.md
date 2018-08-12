@@ -14,4 +14,5 @@ This repository contains my solutions for various Hackerrank challenges. I used 
       * [Time Conversion](./Algorithms/Wamup/09-TimeConversion.js)
     * __Implementation__
       * [Matrix Rotation](./Algorithms/Implementation/MatrixRotation.js)
+      * [Grading Students](./Algorithms/Implementation/GradingStudents.js)
       
